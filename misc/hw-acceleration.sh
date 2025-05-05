@@ -20,6 +20,12 @@ function header_info {
 EOF
 }
 
+# ✅ FIXED: Add missing error message function
+function msg_error() {
+  local msg="$1"
+  echo -e "${BFR} ${RD}✗ ${msg}${CL}"
+}
+
 YW=$(echo "\033[33m")
 BL=$(echo "\033[36m")
 RD=$(echo "\033[01;31m")
